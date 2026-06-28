@@ -1,0 +1,33 @@
+<input autofocus value="hello world">
+<select></select>
+<pre id="output"></pre>
+<script type="module">
+import figlet from 'https://cdn.jsdelivr.net/npm/figlet@1.11.0/+esm';
+
+figlet.defaults({
+  fontPath: 'https://cdn.jsdelivr.net/npm/figlet@1.11.0/fonts'
+});
+const select = document.querySelector("select");
+const fonts = await figlet.fonts();
+
+for (const font of fonts) {
+  const option = document.createElement("option");
+  select.append(option);
+  option.textContent = font;
+  option.value = font;
+}
+
+const input = document.querySelector("input");
+input.addEventListener("keyup", renderFiglet);
+select.addEventListener("change", renderFiglet);
+
+async function renderFiglet() {
+  const value = document.querySelector("input").value;
+  const font = document.querySelector("select").value;
+  const ascii = await figlet.text(value, {font});
+  document.getElementById("output").textContent = ascii;
+}
+
+renderFiglet();
+</script>
+

@@ -45,7 +45,6 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - make and consume a browser turtle api
 - speech to text
 - control snake with voice
-- figlet font
 - 10 print
 - https://en.wikipedia.org/wiki/Cool\_S
 - perlin noise
