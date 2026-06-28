@@ -1,0 +1,57 @@
+<!-- easy version: don't show the correct answer -->
+<h2>Word Unscramble</h2>
+<div id="score">Score: 0</div>
+<h1 id="word"></h1>
+<form onsubmit="guess(); return false;">
+  <input autofocus>
+  <input type="submit">
+</form>
+
+<script>
+let words;
+let word;
+let score = 0;
+const wordEl = document.querySelector("#word");
+const scoreEl = document.querySelector("#score");
+
+fetch("https://raw.githubusercontent.com/bitcoin/bips/ce1862a/bip-0039/english.txt")
+  .then(response => response.text())
+  .then(text => {
+    words = text.split("\n").filter(Boolean);
+    setWord();
+  });
+
+function setWord() {
+  word = words[Math.floor(Math.random() * words.length)]
+  const scrambled = word
+    .split("")
+    .sort(() => Math.random() - 0.5)
+    .join("");
+  wordEl.textContent = scrambled;
+}
+
+function guess() {
+  const input = document.querySelector("input");
+
+  if (input.value === word) {
+    score++;
+    input.value = "";
+    setWord();
+  }
+  else {
+    wordEl.style.background = "#f22";
+    score--;
+    wordEl.textContent = word;
+    input.disabled = true;
+    setTimeout(() => {
+      wordEl.style.background = "transparent";
+      setWord();
+      input.disabled = false;
+      input.value = "";
+      input.focus();
+    }, 1000);
+  }
+
+  scoreEl.textContent = `Score: ${score}`;
+}
+</script>

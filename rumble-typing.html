@@ -1,0 +1,78 @@
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1/dist/confetti.browser.min.js"></script>
+<style>
+/* copied from https://stackoverflow.com/a/36964181/6243352 */
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); } 
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake {
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 0.5s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  border; 1px solid black;
+  font-size: 15pt;
+  height: 100px;
+  width: 300px;
+}
+</style>
+<div contenteditable autofocus onkeydown="rumble();">type here</div>
+<script>
+function rumble() {
+  const position = getCursorRect();
+  confetti({
+    particleCount: 10,
+    spread: 100,
+    startVelocity: 6,
+    gravity: 1.3,
+    scalar: 0.25,
+    drift: -1,
+    flat: true,
+    ticks: 10,
+    colors: ["#888", "#333", "#000"],
+    origin: {
+      x: position.x / innerWidth,
+      y: position.y / innerHeight + 0.01,
+    },
+  });
+  const div = document.querySelector("div");
+  div.classList.add("shake");
+  setTimeout(() => div.classList.remove("shake"), 300);
+};
+
+// copied from https://stackoverflow.com/a/79968823/6243352
+function getCursorRect() {
+  const selection = window.getSelection();
+
+  if (!selection.rangeCount) {
+    return null;
+  }
+
+  const range = selection.getRangeAt(0).cloneRange();
+  range.setStart(selection.focusNode, selection.focusOffset);
+  range.collapse(true);
+  const marker = document.createElement("span");
+  range.insertNode(marker);
+  const rect = marker.getBoundingClientRect();
+  marker.remove();
+  return rect;
+}
+
+</script>

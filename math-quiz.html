@@ -1,0 +1,40 @@
+<div id="question"></div>
+<div id="score">score: 0</div>
+<script>
+// try adding different operators
+
+function random(n) {
+  return Math.floor(Math.random() * n);
+}
+
+let score = 0;
+let currentAnswer;
+
+function newQuestion() {
+  const a = random(100);
+  const b = random(100);
+  currentAnswer = a + b;
+
+  const q = document.querySelector("#question");
+  q.innerHTML = `
+    <p>${a} + ${b}?</p>
+    <form onsubmit="checkAnswer(); return false;">
+      <input id="answer"><input type="submit">
+    </form>
+  `;
+  document.querySelector("#answer").focus();
+};
+
+function checkAnswer() {
+  const n = Number(document.querySelector("#answer").value);
+  
+  if (n === currentAnswer) {
+    score++;
+    document.querySelector("#score").setHTML("score: " + score);
+  }
+
+  newQuestion();
+}
+
+newQuestion();
+</script>

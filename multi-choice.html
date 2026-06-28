@@ -1,0 +1,46 @@
+<div>
+  <p>
+    Choose the amphibian
+  </p>
+  <button onclick="answer1('frog')">frog 🐸</button>
+  <button onclick="answer1('lizard')">lizard 🦎</button>
+  <button onclick="answer1('snake')">snake 🐍</button>
+  <button onclick="answer1('turtle')">turtle 🐢</button>
+  <div id="answer1"></div>
+</div>
+<div>
+  <p>
+    What's Michael Jordan's middle name?
+  </p>
+  <button onclick="answer2('jermaine')">Jermaine</button>
+  <button onclick="answer2('jacob')">Jacob</button>
+  <button onclick="answer2('jonathan')">Jonathan</button>
+  <button onclick="answer2('jeffrey')">Jeffrey</button>
+  <div id="answer2"></div>
+</div>
+<div id="score"></div>
+<script>
+let correct = 0;
+
+function answer1(choice) {
+  if (choice === "frog") {
+    document.querySelector("#answer1").setHTML("yep");
+    correct++;
+  }
+  else {
+    document.querySelector("#answer1").setHTML("wrong");
+  }
+}
+
+function answer2(choice) {
+  if (choice === "jeffrey") {
+    document.querySelector("#answer2").setHTML("you got it");
+    correct++;
+    document.querySelector("#score").setHTML("final score: " + correct + "/2");
+  }
+  else {
+    document.querySelector("#answer2").setHTML("nope");
+    document.querySelector("#score").setHTML("final score: " + correct + "/2");
+  }
+}
+</script>

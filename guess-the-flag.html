@@ -1,0 +1,55 @@
+<div id="flag" style="font-size: 10em;"></div>
+<form onsubmit="guessCountry(); return false;">
+  <label>guess the country:</label>
+  <input autofocus><input type="submit">
+  <button type="button" onclick="giveUp();">I Give Up</button>
+</form>
+<div id="score">Score: 0</div>
+
+<script type="module">
+import countries from "https://cdn.jsdelivr.net/npm/world-countries/+esm";
+
+const input = document.querySelector("input");
+let country;
+let score = 0;
+
+function newFlag() {
+  country = countries[Math.floor(Math.random() * countries.length)];
+  document.querySelector("#flag").setHTML(country.flag);
+}
+
+window.guessCountry = function () {
+  const guess = input.value.toLowerCase().trim();
+
+  if (guess === country.name.common.toLowerCase()) {
+    score++;
+    document.querySelector("#score").setHTML(`Score: ${score}`);
+    input.value = "";
+    newFlag();
+  }
+  else {
+    input.style.background = "#ff0";
+    setTimeout(() => {
+      input.style.background = "transparent";
+    }, 400);
+  }
+};
+
+window.giveUp = function () {
+  input.value = country.name.common;
+  input.focus();
+};
+
+newFlag();
+
+// easier version: no 'i give up'
+// harder version: add progress hints that show first letter of country, continent, etc
+
+// other APIs:
+// https://flagcdn.com/
+// https://flagsapi.com/
+// https://www.apicountries.com/docs
+// https://publicapis.io/rest-countries-api
+// import * as flags from "https://cdn.jsdelivr.net/npm/country-flag-icons@1.6.19/string/3x2/+esm";
+</script>
+

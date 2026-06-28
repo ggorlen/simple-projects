@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+   /*
+https://chatgpt.com/c/6a172dfa-47b0-83e8-a0da-c70c3deef584
+   #app {
+      font-family: monospace;
+      max-width: 600px;
+    }
+
+    .row {
+      margin: 10px 0;
+      padding: 8px;
+      border-left: 2px solid #ccc;
+    }
+
+    .q {
+      margin-bottom: 6px;
+    }
+
+    input {
+      padding: 4px;
+      margin-right: 6px;
+    }
+
+    button {
+      padding: 4px 8px;
+    }*/
+  </style>
+</head>
+
+<body>
+
+<div id="app"></div>
+
+<script>
+function createChat(root) {
+  function row(questionText) {
+    const el = document.createElement("div");
+    el.className = "row";
+
+    el.innerHTML = `
+      <div class="q"> ${questionText}</div>
+      <input />
+      <button>Submit</button>
+    `;
+
+    root.appendChild(el);
+    return el;
+  }
+
+  function ask(question) {
+    return new Promise(resolve => {
+      const el = row(question);
+      const input = el.querySelector("input");
+      const button = el.querySelector("button");
+      input.focus();
+
+      function done() {
+        input.disabled = true;
+        button.disabled = true;
+        resolve(input.value);
+      }
+
+      button.onclick = done;
+
+      input.onkeydown = (e) => {
+        if (e.key === "Enter") {
+          done();
+        }
+      };
+    });
+  }
+
+  function say(text) {
+    const el = document.createElement("div");
+    el.className = "row";
+    el.textContent = text;
+    root.appendChild(el);
+  }
+
+  return { ask, say };
+}
+
+async function main() {
+  const { ask, say } = createChat(document.getElementById("app"));
+  let score = 0;
+
+  const a = await ask("2 + 2?");
+  if (a === "4") {
+    say("✅");
+    score++;
+  } else {
+    say("❌");
+  }
+
+  const b = await ask("Capital of France?");
+  if (b.toLowerCase() === "paris") {
+    say("✅");
+    score++;
+  }
+  else {
+    say("❌");
+  }
+
+  const c = await ask("Grass color?");
+  if (c.toLowerCase() === "green") {
+    say("✅");
+    score++;
+  } else {
+    say("❌");
+  }
+
+  say("Score: " + score);
+}
+
+main();
+</script>
+
+</body>
+</html>
