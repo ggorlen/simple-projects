@@ -1,0 +1,23 @@
+<style>
+button {
+  transition: all 1s ease-in-out;
+  position: absolute;
+}
+</style>
+
+score: <span id="out">0</span>
+<button tabindex="-1">click me</button>
+<script>
+button = document.querySelector("button");
+score = 0;
+
+button.onclick = () => {
+  score++;
+  out.setHTML(score);
+};
+
+setInterval(() => {
+  button.style.top = Math.random() * innerHeight;
+  button.style.left = Math.random() * innerWidth;
+}, 500);
+</script>
