@@ -1,0 +1,30 @@
+<style>
+button {
+  transition: all 0.1s ease-out;
+  position: absolute;
+}
+</style>
+
+score: <span id="out">0</span>
+<button tabindex="-1">click me</button>
+<script>
+const button = document.querySelector("button");
+let score = 0;
+
+button.onclick = () => {
+  score++;
+  out.setHTML(score);
+};
+
+document.addEventListener("mousemove", event => {
+  const mouseX = event.pageX;
+  const mouseY = event.pageY;
+  const {x, y} = button.getBoundingClientRect();
+  const dist = Math.hypot(mouseX - x, mouseY - y);
+
+  if (dist < 100) {
+    button.style.top = Math.random() * (innerHeight - 100);
+    button.style.left = Math.random() * (innerWidth - 100);
+  }
+});
+</script>
