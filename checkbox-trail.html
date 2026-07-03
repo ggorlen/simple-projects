@@ -1,0 +1,20 @@
+<body>
+</body>
+<script>
+for (let i = 0; i < 10_000; i++) {
+  const checkbox = document.createElement("input");
+  document.body.appendChild(checkbox);
+  checkbox.type = "checkbox";
+  checkbox.style.margin = 0;
+
+  checkbox.addEventListener("mouseover", e => {
+    e.target.checked = !e.target.checked;
+  });
+
+  checkbox.addEventListener("mouseout", e =>
+    setTimeout(() => {
+      e.target.checked = !e.target.checked;
+    }, 1000)
+  );
+}
+</script>

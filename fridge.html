@@ -1,0 +1,40 @@
+<script>
+  const random = (n) => Math.floor(Math.random() * n);
+
+  fetch(
+    "https://raw.githubusercontent.com/bitcoin/bips/ce1862a/bip-0039/english.txt",
+  )
+    .then((response) => response.text())
+    .then((text) => {
+      words = text.split("\n").filter(Boolean);
+
+      for (let i = 0; i < 20; i++) {
+        const div = document.createElement("div");
+        div.textContent = words[random(words.length)];
+        div.style.position = "absolute";
+        div.style.cursor = "pointer";
+        div.style.userSelect = "none";
+        div.style.border = "1px solid black";
+        div.style.padding = "0.2em";
+        div.style.top = random(innerHeight) + "px";
+        div.style.left = random(innerWidth) + "px";
+        document.body.append(div);
+        div.onmousedown = () => {
+          dragging = div;
+        };
+        div.onmouseup = () => {
+          dragging = null;
+        };
+      }
+    });
+
+  let dragging;
+
+  document.addEventListener("mousemove", (event) => {
+    if (dragging) {
+      console.log(event);
+      dragging.style.top = event.pageY;
+      dragging.style.left = event.pageX;
+    }
+  });
+</script>

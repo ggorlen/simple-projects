@@ -1,0 +1,28 @@
+<script>
+const colors = ["red", "blue", "green", "yellow", "purple", "indigo", "black", "white"];
+let wordI = 0;
+const word = "helloworld!";
+
+document.addEventListener("mousemove", event => {
+  const el = document.createElement("button");
+  el.type = "checkbox";
+  el.textContent = word[wordI++];
+
+  if (wordI > 10) wordI = 0;
+
+  el.style.position = "absolute";
+  el.style.top = event.pageY + "px";
+  el.style.left = event.pageX + "px";
+  document.body.appendChild(el);
+  let colorI = 0;
+
+  setInterval(() => {
+    el.style.background = colors[colorI];
+    colorI++;
+
+    if (colorI > colors.length) {
+      colorI = 0;
+    }
+  }, 1000);
+});
+</script>

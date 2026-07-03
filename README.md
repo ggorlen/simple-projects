@@ -18,7 +18,7 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - visual styling doesn't matter unless it's integral to the application or adds coolness/fun factor/juice. "professional looking" is a non-goal.
 - ok to use external libs/APIs, but try to use them unobtrusively and make installation as easy as possible (ideally, code just works copy/pasted into a simple-to-set-up environment)
   - in some cases it may be advisable to create a little library the student can import to make more complex apps easy
-  - in other cases the programmer can copy-paste a snippet from stack overflow to bootstrap a specific behavior
+  - in other cases the programmer can copy-paste a snippet from stack overflow to bootstrap a specific behavior, where no obvious lib exists
 - should be extensible
 
 # Ideas
@@ -26,28 +26,58 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - fun with colors
 - speech synthess
 - record audio/playback
-- ascii image stuff
-- webcam pixel processing effects
+- ascii image stuff https://www.npmjs.com/package/image-to-ascii
+- webcam pixel processing effects or loops/stop motion
 - pic chat
 - hangman
 - typing speed test
 - quotes or poem identifier
+- binary tree with turtle
+- truchet tiling, click a tile to rotate as follow up
+- drawing app with html elements
+- nba stats
 - draggable images/letters like fridge magnets
 - emoji memory game
-- mouse pointer trail type stuff? rainbow worm/canvas
+- mouse pointer trail type stuff? rainbow worm/canvas, memory dot
 - `<pre>` animation, maybe with matter.js or images to pixels?
 - color matcher
 - auto-play online game in browser console
 - beginner project game library that can't make more than 1 or 2 types of simple games, but is super high level?
 - console, color or emoji matching game, memory game
-- js wrapper/transpiler to puzzlescript to avoid the weird syntax?
 - https://fonts.google.com/specimen/Press+Start+2P
 - make and consume a browser turtle api
 - speech to text
+- simple snake without coord system might be possible
+- matter.js snake with constraints
 - control snake with voice
-- 10 print
-- https://en.wikipedia.org/wiki/Cool\_S
+- RPS with voice
+- 10 print, maybe achievable with ascii?
+- https://en.wikipedia.org/wiki/Cool\_S with turtle
 - perlin noise
-- push the chat up to the server and let users implement the front end
+- push the chat backend up to the server and let users implement the front end
 - corsanywhere get news articles or random wiki article
 - guess the band genre from image
+- analog or digital clock
+- sierpinski random walk
+- https://www.npmjs.com/package/cowsay
+- infinite details/sumamry collapse
+- https://github.com/openfootball/worldcup
+- https://zanagrams.com/
+- https://stackoverflow.com/a/79968941/6243352
+- random colors/fonts on text
+- random colors userscript from cseducators
+- draw stuff and have it reflected
+  - https://www.discogs.com/master/3326281-Muslimgauze-Lazhareem-Ul-Leper/image/SW1hZ2U6NDAzNTQxNg==
+- dvd bouncing logo
+  - simple collision detect/resolve framework?
+  - matter.js dvd bouncing logo
+- typing up book, get book content from github
+  - https://raw.githubusercontent.com/textvs/Austen-Works/refs/heads/master/1813%20%7C%20Pride%20and%20Prejudice%20(PG%201342)/Jane%20Austen%2C%20Pride%20and%20Prejudice%20(1813).md
+- 52 card pickup, trash pickup
+- something with sound, audio element
+- https://theuselessweb.com/sites/
+- https://jij021.github.io/spring-2024/checkbox-race/index.html
+- https://github.com/tholman/checkboxrace
+- https://en.wikipedia.org/wiki/Special:Random
+  - 7 steps to jesus?
+- js wrapper/transpiler to puzzlescript to avoid the weird syntax?
