@@ -1,0 +1,15 @@
+<style>
+* {
+  font-family: monospace;
+  font-size: 20pt;
+  transform: rotate(-90deg);
+}
+</style>
+<div></div>
+<script>
+const container = document.querySelector("div");
+
+for (let i = 0; i < 10_000; i++) {
+  container.textContent += String.fromCharCode(Math.floor(Math.random() * 90) + 740) + (Math.random() > 0.99 ? "\n" : "");
+}
+</script>

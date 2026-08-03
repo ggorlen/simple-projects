@@ -1,0 +1,26 @@
+<body>
+click and drag to draw
+</body>
+<script>
+const random = n => Math.floor(Math.random() * n);
+let drawing = false;
+document.onmousedown = () => {
+  drawing = true;
+};
+document.onmouseup = () => {
+  drawing = false;
+};
+document.onmousemove = (event) => {
+  if (drawing) {
+    const div = document.createElement("div");
+    div.style.position = "absolute";
+    div.textContent = String.fromCharCode(4500 + random(100));
+    div.style.left = event.pageX + "px";
+    div.style.top = event.pageY + "px";
+    document.body.append(div);
+  }
+};
+
+// TODO: try different offsets; make it so the text drips off the screen after awhile
+// simpler version: skip the random and just use a single char like 'x'
+</script>

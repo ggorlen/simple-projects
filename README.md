@@ -24,49 +24,57 @@ A collection of simple projects beginning programmers can do with guidance in a 
 # Ideas
 
 - fun with colors
-- speech synthess
 - record audio/playback
+  - 10 second single delay
 - ascii image stuff https://www.npmjs.com/package/image-to-ascii
 - webcam pixel processing effects or loops/stop motion
+  - maybe use p5 to make gif
 - pic chat
 - hangman
 - typing speed test
 - quotes or poem identifier
 - binary tree with turtle
-- truchet tiling, click a tile to rotate as follow up
-- drawing app with html elements
 - nba stats
 - draggable images/letters like fridge magnets
 - emoji memory game
 - mouse pointer trail type stuff? rainbow worm/canvas, memory dot
+- do something with those special characters that stack like the four tet album
 - `<pre>` animation, maybe with matter.js or images to pixels?
-- color matcher
-- auto-play online game in browser console
-- beginner project game library that can't make more than 1 or 2 types of simple games, but is super high level?
+- color matcher with color selector UI, pick the nearest color
 - console, color or emoji matching game, memory game
 - https://fonts.google.com/specimen/Press+Start+2P
 - make and consume a browser turtle api
 - speech to text
+- masonry images
+- text to speech
 - simple snake without coord system might be possible
 - matter.js snake with constraints
+- SF blackberry/fruit picking guide
+- auto-play online game in browser console
 - control snake with voice
 - RPS with voice
-- 10 print, maybe achievable with ascii?
+- 10 print, maybe achievable with ascii and a special font?
 - https://en.wikipedia.org/wiki/Cool\_S with turtle
 - perlin noise
+  - https://github.com/jobtalle/CubicNoise
 - push the chat backend up to the server and let users implement the front end
 - corsanywhere get news articles or random wiki article
+- https://en.wikipedia.org/wiki/Special:Random
+  - 7 steps to jesus?
+- https://jelly-ui.com/
 - guess the band genre from image
 - analog or digital clock
 - sierpinski random walk
 - https://www.npmjs.com/package/cowsay
-- infinite details/sumamry collapse
+- infinite details/summary collapse
 - https://github.com/openfootball/worldcup
 - https://zanagrams.com/
+- n-puzzle
+- simon
 - https://stackoverflow.com/a/79968941/6243352
 - random colors/fonts on text
 - random colors userscript from cseducators
-- draw stuff and have it reflected
+- draw stuff and have it reflected like a mandala
   - https://www.discogs.com/master/3326281-Muslimgauze-Lazhareem-Ul-Leper/image/SW1hZ2U6NDAzNTQxNg==
 - dvd bouncing logo
   - simple collision detect/resolve framework?
@@ -76,8 +84,25 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - 52 card pickup, trash pickup
 - something with sound, audio element
 - https://theuselessweb.com/sites/
+- weather app with API and emojis
+- poem/haiku generator
+- quote displayer
+- arctan2 arrows pointing at cursor
+- hold to charge + shoot golf game with matter.js?
+- writing animation with ✍ 9997 charCode and audio of writing sound
+- ⛧ 9733 9959 10023 11088 8902 ⏾ 9214 twinkling stars animation
+- red light/green light ⏿ 9215
+- ✵ 10037 snow animation
+- maze with box drawing characters
+- ⛟  9951 vehicle/bike animation or pedestrian car dodge game
+- aquarium animation
 - https://jij021.github.io/spring-2024/checkbox-race/index.html
 - https://github.com/tholman/checkboxrace
-- https://en.wikipedia.org/wiki/Special:Random
-  - 7 steps to jesus?
+- https://github.com/thundercomb/poetrydb great api for student projects, could build something like this
+- https://sighack.com/post/getting-creative-with-perlin-noise-fields
+- https://18words.com/
+- https://maptap.gg/ or simple geography guesser (given photo, guess its location or year https://www.chronophoto.app/game.html)
+- leaflet map to display photos from different places pulled from wiki maybe
+- https://mattrickard.com/list-of-all-oblique-strategies or angus maclise year
+- beginner project game library that can't make more than 1 or 2 types of simple games, but is super high level?
 - js wrapper/transpiler to puzzlescript to avoid the weird syntax?

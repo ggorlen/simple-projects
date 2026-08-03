@@ -1,0 +1,27 @@
+<body></body>
+<script>
+const random = n => Math.floor(Math.random() * n);
+const size = 32;
+
+for (let i = 0; i < innerHeight; i += size) {
+  for (let j = 0; j < innerWidth; j += size) {
+    const div = document.createElement("div");
+    div.style.left = j + "px";
+    div.style.top = i + "px";
+    div.style.position = "absolute";
+    div.style.fontSize = size * 1.35 + "px";
+    document.body.append(div);
+    div.textContent = String.fromCharCode(9698 + random(4));
+  }
+}
+
+/* TODO follow ups to try:
+- random weight
+- perlin noise
+- sliders to change size
+- 10-print style scrolling
+- clicking tile to rotate it
+- repeating matrix patterns
+- different char offset, like 9692, 9712, 10548, 11008, 11016, 11030, 5488, 5514, 5607, 5751
+*/
+</script>
