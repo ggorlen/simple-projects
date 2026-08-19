@@ -23,6 +23,7 @@ A collection of simple projects beginning programmers can do with guidance in a 
 
 # Ideas
 
+- mad libs: https://www.thewordfinder.com/wordlibs/story/28975
 - fun with colors
 - record audio/playback
   - 10 second single delay
@@ -31,6 +32,8 @@ A collection of simple projects beginning programmers can do with guidance in a 
   - maybe use p5 to make gif
 - pic chat
 - hangman
+- speech API: say word and you spell it: https://github.com/zydou/high-frequency-words/tree/master
+  - <https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API>
 - typing speed test
 - quotes or poem identifier
 - binary tree with turtle
@@ -88,6 +91,7 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - poem/haiku generator
 - quote displayer
 - arctan2 arrows pointing at cursor
+- simple three.js 3d text or something
 - hold to charge + shoot golf game with matter.js?
 - writing animation with ✍ 9997 charCode and audio of writing sound
 - ⛧ 9733 9959 10023 11088 8902 ⏾ 9214 twinkling stars animation
@@ -106,3 +110,5 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - https://mattrickard.com/list-of-all-oblique-strategies or angus maclise year
 - beginner project game library that can't make more than 1 or 2 types of simple games, but is super high level?
 - js wrapper/transpiler to puzzlescript to avoid the weird syntax?
+
+

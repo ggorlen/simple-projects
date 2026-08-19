@@ -1,0 +1,43 @@
+<label>
+  Provide your <a href="https://openrouter.ai/workspaces/default/keys">OpenRouter API key</a> (we'll use a free model):
+  <input placeholder="sk-or-v1-4f0..." style="width: 600px">
+</label>
+<form>
+  <div>
+    <br>
+  </div>
+  <input id="user" autofocus><input type="submit">
+</form>
+<script>
+const form = document.querySelector("form");
+const out = document.querySelector("div");
+const user = document.querySelector("#user");
+form.addEventListener("submit", async event => {
+  event.preventDefault();
+  const key = document.querySelector("input").value;
+  const content = user.value;
+  form.reset();
+  out.innerHTML += "<br>&gt; " + content;
+  form.querySelector("[type='submit']").disabled = true;
+  const response = await fetch(
+    "https://openrouter.ai/api/v1/chat/completions",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${key}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "nvidia/nemotron-nano-9b-v2:free",
+        messages: [{ role: "user", content }],
+        include_reasoning: false,
+        // stream: true,
+      }),
+    },
+  );
+  const data = await response.json();
+  form.querySelector("[type='submit']").disabled = false;
+  out.innerHTML += "<br>" + data.choices[0].message.content;
+});
+// TODO add marked for markdown parsing, streaming, error handling, etc
+</script>
