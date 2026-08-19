@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/gh/ggorlen/dom-turtle@fd70ed4/js/dom-turtle.js"></script>
+<style>
+#turtle-container > * {
+  position: absolute;
+}
+</style>
+<div id="turtle-container"></div>
+<script>
+const rootEl = document.querySelector("#turtle-container");
+const turtle = Turtle.turtle(rootEl);
+
+document.addEventListener("mousemove", event => {
+  turtle.goto(event.pageX, event.pageY);
+  const html = `<button
+    style="transform: rotate(${turtle.heading()}deg);
+           background: hsl(${Math.random() * 100}, 80%, 60%)"
+  >Heyyyyyyyyyy</button>`;
+  turtle.shape(html);
+  turtle.stamp();
+  turtle.right(5);
+});
+</script>
