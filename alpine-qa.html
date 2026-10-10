@@ -1,0 +1,30 @@
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<div x-data="{
+  step: 1,
+  name: '',
+  color: '',
+  food: ''
+}">
+  <div x-show="step === 1">
+    <p>What is your name?</p>
+    <input x-model="name" @keydown.enter="step = 2">
+    <button @click="step = 2">Next</button>
+  </div>
+
+  <div x-show="step === 2">
+    <p>Favorite color?</p>
+    <input x-model="color" @keydown.enter="step = 3">
+    <button @click="step = 3">Next</button>
+  </div>
+
+  <div x-show="step === 3">
+    <p>Favorite food?</p>
+    <input x-model="food" @keydown.enter="step = 4">
+    <button @click="step = 4">Finish</button>
+  </div>
+
+  <div x-show="step === 4">
+    <p x-text="`${name} likes ${color} and ${food}`"></p>
+  </div>
+</div>

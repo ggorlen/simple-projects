@@ -1,0 +1,16 @@
+<script src="https://cdn.jsdelivr.net/gh/Kranf99/IOKranf@eeb4bab/lib/iokranf.js"></script>
+<pre id="iokranf_container" style="height: 600px;"></pre>
+<script type="module">
+const {println, printhr, input, click, close} = new IOKranf("iokranf_container");
+
+println("Hello!");
+printhr();
+
+println("Are you happy?!");
+const response = await click("yes", "no");
+println("you clicked " + response + "\n");
+
+const name = await input("Enter your name:");
+println("Hello " + name + "\n");
+close();
+</script>

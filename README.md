@@ -25,8 +25,6 @@ A collection of simple projects beginning programmers can do with guidance in a 
 
 - mad libs: https://www.thewordfinder.com/wordlibs/story/28975
 - fun with colors
-- record audio/playback
-  - 10 second single delay
 - ascii image stuff https://www.npmjs.com/package/image-to-ascii
 - webcam pixel processing effects or loops/stop motion
   - maybe use p5 to make gif
@@ -34,11 +32,22 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - hangman
 - speech API: say word and you spell it: https://github.com/zydou/high-frequency-words/tree/master
   - <https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API>
+- speech to text
+- text to speech
+- typing up book, get book content from github
+  - https://raw.githubusercontent.com/textvs/Austen-Works/refs/heads/master/1813%20%7C%20Pride%20and%20Prejudice%20(PG%201342)/Jane%20Austen%2C%20Pride%20and%20Prejudice%20(1813).md
 - typing speed test
+  - https://typ.ing/
 - quotes or poem identifier
+- some webcam processing/video feedback hack
+- p5 brush
+- drip painting
+- https://en.wikipedia.org/wiki/Hatching_(heraldry)
+- rough js
 - binary tree with turtle
+- create a game that tests how fast you can fill out a html form
 - nba stats
-- draggable images/letters like fridge magnets
+- https://chrisburnell.com/html-can-do-that/#example-until-found
 - emoji memory game
 - mouse pointer trail type stuff? rainbow worm/canvas, memory dot
 - do something with those special characters that stack like the four tet album
@@ -47,9 +56,7 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - console, color or emoji matching game, memory game
 - https://fonts.google.com/specimen/Press+Start+2P
 - make and consume a browser turtle api
-- speech to text
 - masonry images
-- text to speech
 - simple snake without coord system might be possible
 - matter.js snake with constraints
 - SF blackberry/fruit picking guide
@@ -67,6 +74,7 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - https://jelly-ui.com/
 - guess the band genre from image
 - analog or digital clock
+- https://bigwords.page/
 - sierpinski random walk
 - https://www.npmjs.com/package/cowsay
 - infinite details/summary collapse
@@ -82,8 +90,6 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - dvd bouncing logo
   - simple collision detect/resolve framework?
   - matter.js dvd bouncing logo
-- typing up book, get book content from github
-  - https://raw.githubusercontent.com/textvs/Austen-Works/refs/heads/master/1813%20%7C%20Pride%20and%20Prejudice%20(PG%201342)/Jane%20Austen%2C%20Pride%20and%20Prejudice%20(1813).md
 - 52 card pickup, trash pickup
 - something with sound, audio element
 - https://theuselessweb.com/sites/
@@ -110,5 +116,5 @@ A collection of simple projects beginning programmers can do with guidance in a 
 - https://mattrickard.com/list-of-all-oblique-strategies or angus maclise year
 - beginner project game library that can't make more than 1 or 2 types of simple games, but is super high level?
 - js wrapper/transpiler to puzzlescript to avoid the weird syntax?
-
+- fretboard trainer: https://github.com/Ethan-Winer/learn-the-fretboard
 
