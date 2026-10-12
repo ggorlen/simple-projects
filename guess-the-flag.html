@@ -1,6 +1,6 @@
 <div id="flag" style="font-size: 10em;"></div>
 <form onsubmit="guessCountry(); return false;">
-  <label>guess the country:</label>
+  <label>which country this flag for?</label>
   <input autofocus><input type="submit">
   <button type="button" onclick="giveUp();">I Give Up</button>
 </form>
@@ -38,6 +38,7 @@ window.guessCountry = function () {
 window.giveUp = function () {
   input.value = country.name.common;
   input.focus();
+  score--;
 };
 
 newFlag();
